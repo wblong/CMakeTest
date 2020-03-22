@@ -4,6 +4,7 @@ option(BUILD_SHARED_LIBS "Build FOO as shared library." ON)
 option(BUILD_FOO_EXTENSION "Build FOO with module EXTENSION." ON)
 
 add_subdirectory(core)
+
 if(BUILD_FOO_EXTENSION)
 	add_subdirectory(extension)
 endif()

@@ -1,7 +1,11 @@
 file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp)
 file(GLOB_RECURSE sources ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
+message("core headers ${headers}")
+message("core sources ${sources}")
+
 add_library(core STATIC ${sources} ${headers})
+
 set_target_properties(core PROPERTIES CXX_STANDARD 11 LINKER_LANGUAGE CXX)
 target_compile_definitions(core PRIVATE FOO_LIBRARY=1)
 
